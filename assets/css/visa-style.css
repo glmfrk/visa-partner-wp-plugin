@@ -1,0 +1,247 @@
+
+.visa_search_box {
+  padding: 50px 30px;
+  background: #fff;
+  border-radius: 10px;
+	box-shadow: 0px 30px 45px rgba(122, 146, 168, 0.08);
+  border: 1px solid #EDF3F5;
+}
+.visa_search_box .sub_heading {
+  color: #787b84;
+  text-transform: capitalize;
+  word-spacing: 1px;
+  margin-top: 5px;
+  font-size: medium;
+  letter-spacing: 1.5px;
+}
+.myVisaSelectForm {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  gap: 2%;
+  margin: 40px 0px 20px;
+}
+
+.select-box {
+  flex-basis: 30%;
+}
+
+
+.myVisaSelectForm .btn {
+  margin-left: 30px;
+  padding: 7.5px 15px;
+  font-size: 14px;
+}
+
+.select-box label {
+  margin-bottom: 12px;
+  display: block;
+}
+.select-box > select {
+  width: 100%;
+  padding: 5px;
+  padding-left: 20px;
+  border: 1px solid #EDF3F5;
+}
+
+.myVisaSelectForm [type="submit"],
+[type="button"] {
+  background: #00cc99;
+  border: none;
+  outline: none;
+  padding: 18.7px 20px;
+  margin-top: 38px;
+  min-width: 190px;
+  
+}
+
+
+/*
+* RWD Styles
+*/
+
+@media screen and (max-width: 992px) {
+
+  .myVisaSelectForm 
+  {
+    flex-wrap: wrap;
+  }
+  .select-box 
+  {
+    flex-basis: 49%;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .myVisaSelectForm ,
+  .select-box 
+  {
+    display: block;
+    width: 100%;
+  }
+  .select-box {
+    margin-bottom: 20px;
+  }
+  .select-box:last-child {
+    margin-bottom: 0px;
+  }
+  
+  .visa_search_box h2{
+    font-size: 28px;
+  }
+  .select-box > select{
+    padding: 7px;
+    height: 44px;
+  }
+}
+
+
+
+
+ /* 
+ *
+ *Search result: flag and title with button markup  
+ */
+
+ .heading_box{
+  padding: 10px 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 30px 45px rgba(122, 146, 168, 0.08);
+  border: 1px solid #EDF3F5;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 45px;
+  
+}
+.item__left {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+}
+.post__type_image {
+  width: 75px;
+  margin: 0;
+}
+.post__type_image > img{
+  width: 100%;
+}
+.heading_box .post__heading {
+  font-size: 24px;
+  text-transform: capitalize;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+.heading_box .apply__btn {
+  margin-top: 0;
+}
+
+
+
+/* Popup Visa Apply Form Styles  */
+.popup_box_wrapper{
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background: #000000f0;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  bottom: -100px;
+  visibility: hidden;
+  opacity: 0;
+
+}
+.visibilityClass {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup_info_box {
+  max-width: 450px;
+  padding: 20px 15px;
+  padding-top: 55px;
+  background: #e6ebee;
+  box-shadow: 1px 2px 3px #ddd;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  margin: 0px auto;
+  position: relative;
+
+}
+.popup_info_box .heading{
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
+}
+.popup_info_box .sub_heading{
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  color: #787b84;
+  letter-spacing: 1.5px;
+ 
+}
+
+.popup_info_form {
+  margin-top: 30px; 
+}
+
+.popup_info_form .item_box{
+  margin-bottom: 15px;
+  flex-basis: 100%;
+}
+.popup_info_form .item_box:last-child{
+  margin-bottom: 0px;
+}
+
+.popup_info_form label, 
+.popup_info_form input, 
+.popup_info_form button,  
+.popup_info_form textarea  {
+  width: 100%;
+  display: block;
+  background: transparent;
+  border: none ;
+  outline: none;
+}
+
+.popup_info_form .item_box label {
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+.popup_info_form .item_box input,
+.popup_info_form .item_box textarea {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.popup_info_form .submit__btn{
+  width: 190px;
+  margin: 0 auto;
+  background: #00cc99;
+}
+
+.popup_info_box .closePopupBox {
+  min-width: 42px;
+  height: 42px;
+  border: 1px solid #d1d1;
+  border-radius: 50px;
+  background: transparent;
+  box-shadow: 3px 2px 5px #787b84;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.6;
+  position: absolute;
+  top: -25px;
+  right: 15px;
+  padding: 0;
+  transition: all .3s ease-in-out;
+}

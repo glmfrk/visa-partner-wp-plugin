@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Processing Search Box...</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Search box markup  -->
+    <div class="visa_search_box">
+        <h2 class="text-center">YOUR VISA PARTNER</h2>
+        <h4 class="text-center">NEED A VISA?</h4>
+
+        <form action="https://apisolutions.tech/wp-admin/admin-ajax.php" method="post" name="myVisaSelectForm" class="myVisaSelectForm" id="myVisaSelectForm">
+           
+
+            <div class="select-box">
+                <label>I'm a Citizen Of</label>
+                <select id="citizen_country" name="citizen_country">
+                    <option value="">--Select an option--</option>
+                    <option value="36">Bangladesh</option>                </select>
+            </div>
+            
+            <div class="select-box">
+                <label>Travelling to</label>
+                <select id="travel_country" name="travel_country">
+                    <option value="">--Select an option--</option>
+                    <option value="39">Malaysia</option><option value="37">Saudi Arabia</option>                </select>
+            </div>
+            
+            <div class="select-box">
+                <label>Visa Category</label>
+                <select id="visa_category" name="visa_category">
+                    <option value="">--Select an option--</option>
+                    <option value="38">Employment Visa</option>                </select>
+            </div>
+        
+
+            <button type="submit" class="thm-btn submit__btn btn-primary">Check Requirement</button>
+        </form>
+        
+        <br>
+        <div id="error" style="color: red;"></div>
+    </div>
+
+    <!-- Search result: flag and title with button markup  -->
+     <div class="heading_box">
+        <div class="item__left">
+            <figure class="post__type_image">
+                <img src="./assets/images/australia-flag.jpg" alt="flag" />
+            </figure>
+            <h1 class="post__type_title"> Australia Study Visa From Bangladesh </h1>
+        </div>
+        <button type="button" class="thm-btn applay__btn">apply online</button>
+    </div>
+    <div class="meta__info">
+        <h4 class="meta_title"> Available services for Australia</h4>
+        <div> <span>&#x2713;</span> Visa Processing in Bangladesh</div>
+    </div>
+</body>
+</html>
