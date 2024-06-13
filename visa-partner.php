@@ -64,14 +64,16 @@ if (file_exists( __DIR__ . '/inc/ajax-handler.php' )) {
     require_once __DIR__ . '/inc/ajax-handler.php';
 }
 
-if (file_exists( __DIR__ . '/inc/visa-form-shortcode.php' )) {
-    require_once __DIR__ . '/inc/visa-form-shortcode.php';
+if (file_exists( __DIR__ . '/inc/form-shortcode-1st.php' )) {
+    require_once __DIR__ . '/inc/form-shortcode-1st.php';
+}
+if (file_exists( __DIR__ . '/inc/form-shortcode-2nd.php' )) {
+    require_once __DIR__ . '/inc/form-shortcode-2nd.php';
 }
 
-if (file_exists( __DIR__ . '/inc/visaForm-2nd-shortcode.php' )) {
-    require_once __DIR__ . '/inc/visaForm-2nd-shortcode.php';
-}
-
+// if (file_exists( __DIR__ . '/inc/visaForm-2nd-shortcode.php' )) {
+//     require_once __DIR__ . '/inc/visaForm-2nd-shortcode.php';
+// }
 
 
 

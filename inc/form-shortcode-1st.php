@@ -6,13 +6,16 @@ function search_filter_box_shortcode() {
     ob_start();
     ?>
     <div class="visa_search_box">
+
         <h2 class="text-center"><?php esc_html_e('YOUR VISA PARTNER', 'visapartner'); ?></h2>
         <h5 class="text-center sub_heading"><?php esc_html_e('find your visa requirement', 'visapartner'); ?></h5>
+
         <form action="<?php echo esc_url(admin_url('admin-ajax.php')); ?>" method="post" name="myVisaSelectForm" class="myVisaSelectForm" id="myVisaSelectForm">
+
             <div class="select-box">
-                <label><?php esc_html_e('I\'m a Citizen Of', 'visapartner'); ?></label>
+                <label><?php esc_html_e('Your Nationality', 'visapartner'); ?></label>
                 <select id="citizen_country" name="citizen_country">
-                    <option value=""><?php esc_html_e('--Select an option--', 'visapartner'); ?></option>
+                    <option value=""><?php esc_html_e('--Select a nationality--', 'visapartner'); ?></option>
                     <?php
                     $countries = get_terms(array('taxonomy' => 'citizen_country', 'hide_empty' => false));
                     foreach ($countries as $country) {
@@ -21,6 +24,7 @@ function search_filter_box_shortcode() {
                     ?>
                 </select>
             </div>
+
             <div class="select-box">
                 <label><?php esc_html_e('Travelling to', 'visapartner'); ?></label>
                 <select id="travel_country" name="travel_country">
@@ -33,6 +37,7 @@ function search_filter_box_shortcode() {
                     ?>
                 </select>
             </div>
+
             <div class="select-box">
                 <label><?php esc_html_e('Visa Category', 'visapartner'); ?></label>
                 <select id="visa_category" name="visa_category">
@@ -45,12 +50,14 @@ function search_filter_box_shortcode() {
                     ?>
                 </select>
             </div>
+
             <button type="submit" class="thm-btn submit__btn btn-primary"><?php esc_html_e('Check Requirement', 'visapartner'); ?></button>
         </form>
         <br>
         <div id="error" style="color: red;"></div>
         <div id="results" class="results"></div>
     </div>
+
     <script type="text/javascript">
         jQuery(document).ready(function($) {
             $('#myVisaSelectForm').on('submit', function(event) {
